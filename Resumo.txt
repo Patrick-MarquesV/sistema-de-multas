@@ -1,0 +1,20 @@
+Resposta em texto:
+
+Pesquise sobre as propriedades fetch, cascade e optional que podem estar presentes nas anotações de relacionamentos.
+Insira dentro do seu projeto um arquivo txt em que você escreve o seu entendimento sobre elas:
+
+Fetch
+O Fetch é um recurso da ORM hibernate atrelado a anotações de relacionamento entre entidades, como por exemplo: @OneToMany.
+Esse recurso permite modificar o comportamento do framework ao realizar consultas no banco de dados.
+Existem duas opções de Fetch, o Lazy faz com que os dados da entidade só sejam carregados apenas quando for explicitamente solicitado, assumindo valor nulo quando não solicitados mesmo possuindo os dados, já o Eager faz justamente o contrário, carrega os dados mesmo que não sejam solicitados ou utilizados,
+
+Cascade
+O Cascade é um recurso da ORM hibernate atrelada a anotações de relacionamentos entre entidades, como por exemplo: @ManyToOne.
+Esse recurso faz com que alterações realizadas na entidade em que o recurso foi habilitado causem reflexos nas suas entidades filhas.
+Por exemplo:
+
+Se incluirmos em uma relação do tipo @OneToMany o cascade = CascadeType.REMOVE, fará com que ao remover uma entidade dessa tabela, também serão removidas em cascata todas as entidades filhas relacionadas a ela.
+
+Optional
+O Optinal é uma classe do Java que funciona como um container que pode ou não possuir um valor, dessa forma essa classe é capaz de evitar exceções do tipo NullPointerException ao retornar valores Opcionais vazio ou com valores desejados dentro.
+
